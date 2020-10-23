@@ -34,4 +34,3 @@ add_action( 'wp_enqueue_scripts', 'register_my_menus' );
 add_action('wp_enqueue_scripts', 'mon_theme');
 add_action('wp_enqueue_scripts','add_normalize_CSS');
 
-?>
