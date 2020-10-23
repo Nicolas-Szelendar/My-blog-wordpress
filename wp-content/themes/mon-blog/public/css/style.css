@@ -1,0 +1,461 @@
+@font-face {
+    font-family: "GoodBrush";
+    src: url("../fonts/Good\ Brush.otf") format("opentype");
+    font-weight: 35;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+    /*position: fixed;*/
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+    border-radius: 0% 0% 25% 25%;
+}
+
+label a {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-family: GoodBrush;
+}
+
+label h4 {
+    color: white;
+    font-size: 17px;
+    display: inline-block;
+    padding-left: 12px;
+    font-family: GoodBrush;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #1b97f5;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    background: url(../image/quebec-city-hero.jpg) no-repeat;
+    background-size: cover;
+    height: calc(50vh - 11px);
+}
+
+
+/* Breakpoint 956px*/
+
+@media(max-width: 956px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.a :active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* Breakpoint 561px*/
+
+@media(max-width: 661px) {
+    label a {
+        color: white;
+        font-size: 40px;
+        line-height: 80px;
+        padding: 0 20px;
+        font-weight: bold;
+    }
+}
+
+
+/* Breakpoint 470px*/
+
+@media(max-width: 470px) {
+    label a {
+        color: white;
+        font-size: 32px;
+        line-height: 80px;
+        padding: 0 20px;
+        font-weight: bold;
+    }
+}
+
+
+/* Breakpoint 409px*/
+
+@media(max-width: 409px) {
+    label a {
+        color: white;
+        font-size: 28px;
+        line-height: 80px;
+        padding: 0 20px;
+        font-weight: bold;
+    }
+}
+
+
+/* Breakpoint 379px*/
+
+@media(max-width: 379px) {
+    label a {
+        color: white;
+        font-size: 20px;
+        line-height: 80px;
+        padding: 0 20px;
+        font-weight: bold;
+    }
+}
+
+
+/* Breakpoint 312px*/
+
+@media(max-width: 312px) {
+    label a {
+        color: white;
+        font-size: 12px;
+        line-height: 80px;
+        padding: 0 20px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*/ html,
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.main-title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.container {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    height: 280px;
+    max-width: 300px;
+    margin: 0 20px;
+    background: white;
+    transition: 0.4s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+}
+
+.card:hover {
+    height: 470px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .img {
+    height: 200px;
+    width: 100%;
+}
+
+.card .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .top-text {
+    padding: 5px;
+}
+
+.card .top-text .name {
+    font-size: 25px;
+    font-weight: 600;
+    color: #202020;
+}
+
+.card .top-text p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+}
+
+.card .bottom-text {
+    padding: 0 20px 10px 20px;
+    margin-top: 5px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.card:hover .bottom-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .bottom-text .text {
+    text-align: justify;
+}
+
+.card .bottom-text .btn {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.card .bottom-text .btn a {
+    text-decoration: none;
+    background: #e74c3c;
+    color: #f2f2f2;
+    padding: 5px 8px;
+    border-radius: 3px;
+    display: inline-flex;
+    transition: 0.2s;
+}
+
+.card .bottom-text .btn a:hover {
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 978px) {
+    .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .card {
+        max-width: 600px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .main-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 33px;
+        font-weight: 600;
+    }
+}
+
+
+/* -------------footer*-------------*/
+
+footer {
+    padding-top: 10px;
+    color: white;
+    background: #0082e6;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-content {
+    display: flex;
+}
+
+.main-content .box {
+    flex-basis: 60%;
+    padding: 20px 10px;
+}
+
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.center .content .fas {
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover {
+    background: #3a16d8;
+}
+
+.center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone {
+    margin: 15px 0;
+}
+
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right form .msg {
+    margin-top: 10px;
+}
+
+.right form input,
+.right form .msgForm {
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #faf8f8;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+
+.right form input:focus,
+.right form .msgForm:focus {
+    outline-color: #3498db;
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form .btn {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+.right form .btn button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #1d2fd3e0;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 10px;
+    color: white;
+}
+
+.right form .btn button:hover {
+    background: rgba(243, 243, 245, 0.575);
+}
+
+.bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #f8f7f7;
+}
+
+.bottom center span {
+    color: #656565;
+}
+
+.bottom center a {
+    color: #f12020;
+    text-decoration: none;
+}
+
+.bottom center a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
