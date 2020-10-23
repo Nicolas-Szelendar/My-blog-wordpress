@@ -30,6 +30,3 @@
             </ul>-->
         </nav>
         
-        <section></section>
-
-    </header>

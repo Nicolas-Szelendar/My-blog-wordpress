@@ -2,7 +2,9 @@
 
     <!----------------Les premier articles-------------->
 
-    
+    <section></section>
+
+</header>
     <main class="main">
         <div class="main-title">Les news</div>
         <?php if ( have_posts() ) : /* S'il y a des articles */ ?>
