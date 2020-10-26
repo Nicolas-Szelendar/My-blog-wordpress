@@ -7,32 +7,28 @@
 </header>
     <main class="main">
         <div class="main-title">Les news</div>
-        <?php if ( have_posts()): ?>
-            <?php while ( have_posts() ) : the_post();  ?>
-            <div class="card">
-                <div class="img">
-                    <img src="/image/image3.jpeg">
-                </div>
-                <div class="top-text">
-                    <div class="name">
-                        <?php the_author()?></div>
-                    <p><?php the_title()?></p>
-                    <h3><?php the_time()?></h3>
-                </div>
-                <div class="bottom-text">
-                    <div class="text">
-                        <?php the_excerpt()?></div>
-                    <div class="btn">
-                        <a href="#">Lire la suite</a>
+
+            <?php if ( have_posts()): ?>
+            <div class="row">
+
+                <?php while ( have_posts() ) : the_post();  ?>
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title() ?></h5>
+                            <small><?php the_time('F jS, Y'); ?></small>
+                            <p class="card-text"><?php the_content()?><p>
+                            <a href="<?php the_permalink()?>" class="btn btn-primary">Voir plus</a>
+                        </div>
                     </div>
                 </div>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                <?php endif; ?>
             </div>
-            <?php endwhile; ?>
-            <?php else: ?>
-<?php endif; ?>
-            
         
-        
+    
 
     </main>
 

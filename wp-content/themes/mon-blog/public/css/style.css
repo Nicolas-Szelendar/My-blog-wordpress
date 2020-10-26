@@ -205,29 +205,16 @@ body {
     font-weight: 600;
 }
 
-.container {
+
+/*.container {
     padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+}*/
 
-.card {
-    height: 280px;
-    max-width: 300px;
-    margin: 0 20px;
-    background: white;
-    transition: 0.4s;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5%;
-}
 
-.card:hover {
-    height: 470px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.card .img {
+/*.card .img {
     height: 200px;
     width: 100%;
 }
@@ -301,7 +288,7 @@ body {
         max-width: 600px;
         margin: 20px 0;
     }
-}
+}*/
 
 @media screen and (max-width:440px) {
     .main-title {
