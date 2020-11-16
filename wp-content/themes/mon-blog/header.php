@@ -26,6 +26,7 @@
       <?php endif; ?>
       <?php wp_nav_menu(['theme_location' => 'header', 'container' => 'false']) ?>
 
+<!-------------------Template nav menu---------------->
       <!-- 
               <ul>
                 <li><a class="active" href=#>Accueil</a></li>

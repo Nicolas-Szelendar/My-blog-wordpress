@@ -6,17 +6,20 @@
     <div class="main-title">Les news</div>
 
     <?php if (have_posts()) : ?>
-        <div class="row">
+        <div class="card-deck">
 
             <?php while (have_posts()) : the_post();  ?>
                 <div class="col-sm-4">
-                    <div class="card">
-                        <img class="<?php the_post_thumbnail('post_thumbnail') ?>" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php the_title() ?></h5>
-                            <small><?php the_time('F jS, Y'); ?></small>
-                            <p class="card-text"><?php the_content() ?><p>
-                                    <a href="<?php the_permalink() ?>" class="btn btn-primary">Voir plus</a>
+                    <div class="w-80 p-8">
+                        <div class="card">
+                        
+                    <?php the_post_thumbnail ('post-thumbnail', ['class' => 'card-img-top','alt' => 'style=width:100%; heith:50%;']); ?>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php the_title() ?></h5>
+                                <h6>Publié le <?php the_time(get_option( 'date_format' )); ?></h6>
+                                <p class="card-text"><?php the_excerpt() ?><p>
+                                        <a href="<?php the_permalink() ?>" class="btn btn-primary">Voir plus</a>
+                            </div>
                         </div>
                     </div>
                 </div>

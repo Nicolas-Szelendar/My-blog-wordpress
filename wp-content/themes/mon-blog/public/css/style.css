@@ -103,6 +103,7 @@ section {
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 7;
     }
     nav ul li {
         display: block;
@@ -186,6 +187,9 @@ section {
     }
 }
 
+
+/*******************main*********************/
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 */ html,
 body {
@@ -205,18 +209,14 @@ body {
     font-weight: 600;
 }
 
-
-/*.container {
-    padding: 0 40px;
+.container-fluid {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}*/
+    justify-content: center;
+    padding: 40px 40px;
+}
 
-
-/*.card .img {
-    height: 200px;
-    width: 100%;
+.card-deck {
+    padding: 50px 50px;
 }
 
 .card .img img {
@@ -279,8 +279,8 @@ body {
     transform: scale(0.9);
 }
 
-@media screen and (max-width: 978px) {
-    .container {
+@media screen and (max-width: 800px) {
+    .container-fluid {
         flex-wrap: wrap;
         flex-direction: column;
     }
@@ -288,7 +288,7 @@ body {
         max-width: 600px;
         margin: 20px 0;
     }
-}*/
+}
 
 @media screen and (max-width:440px) {
     .main-title {

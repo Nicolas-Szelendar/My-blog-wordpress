@@ -49,7 +49,8 @@ function register_my_menus()
 function montheme_supports()
 {
     add_theme_support('title-tag');
-    add_theme_support('poste-thumbnails');
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 200, 200, true );
 }
 
 
